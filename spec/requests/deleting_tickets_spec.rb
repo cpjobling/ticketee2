@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature "Deleting tickets"  do
-  let!(:project) { Factory(:project) }
-  let!(:ticket)  { Factory(:ticket, :project => project) }
+  let!(:project) { FactoryGirl.create(:project) }
+  let!(:ticket)  { FactoryGirl.create(:ticket, :project => project) }
 
   before do
     visit '/'
